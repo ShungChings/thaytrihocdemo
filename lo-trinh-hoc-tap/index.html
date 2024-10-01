@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề Xuất Lộ Trình Học Tập Cá Nhân Hóa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Thầy Trí Học 4.0</h1>
+        </div>
+      
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Tùy chỉnh lộ trình học tập của bạn</h2>
+            <form id="learning-path-form">
+                <div class="input-group">
+                    <label for="personality">Tính cách của bạn:</label>
+                    <select id="personality" name="personality">
+                        
+                        <option value="creative">Sáng tạo - Logic</option>
+        
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="goals">Mục tiêu học tập:</label>
+                    <select id="goals" name="goals">
+                        <option value="university">Luyện thi đại học</option>
+                       
+                        <option value="personal">Tự học</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="interest">Lĩnh vực:</label>
+                    <select id="interest" name="interest">
+                        <option value="math">Toán</option>
+                        <option value="science">Khoa học(Lý,Hóa,..)</option>
+                        <option value="literature">Văn học</option>
+                        <option value="technology">Công nghệ(Tin Học)</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="generateLearningPath()">Xem lộ trình học</button>
+            </form>
+        </section>
+
+        <section id="recommendations" class="hidden">
+            <h2>Đề xuất lộ trình học cho bạn bạn</h2>
+            <div id="path-suggestions"></div>
+        </section>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
