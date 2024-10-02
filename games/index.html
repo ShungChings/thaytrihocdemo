@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Giáo Dục</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #3b8af9;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #00d9ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #333;
+}
+
+.card a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #ffeb3b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+img{
+    height: 150px;
+    width: 260px;
+}
+
+    </style>
+    <header>
+        <h1>Thư Viện Trò Chơi Giáo Dục</h1>
+      
+    </header>
+
+    <div class="container">
+       
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/611a778970251b001dc19cce/start?studentShare=true">
+            <h2>Toán Tổng Hợp Game</h2>
+            <img style="" src="https://www.euroschoolindia.com/wp-content/uploads/2023/10/what-is-vedic-mathss-for-kids-jpg.webp" alt="">
+            <p>Khám Phá Các Dạng Toán và Cải Thiện Tư Duy của bạn. Tham Gia Ngay</p></a>
+        </div>
+
+        <div class="card" id="toan">
+            \<a href="https://quizizz.com/join/quiz/61c988adbdaa0c001db33007/start?studentShare=true">
+            <h2>Toán Tư Hình Học</h2>
+            <img style="" src="https://infinitylearn.com/surge/wp-content/uploads/2021/12/MicrosoftTeams-image-58.jpg" alt="">
+            <p>Khám Phá Các Dạng Toán và Cải Thiện Tư Duy của bạn. Tham Gia Ngay</p></a>
+        </div>
+
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/61960dacb7a13d001dc00da6/start?studentShare=true">
+            <h2>Toán Tư Duy</h2>
+            <img style="" src="https://static.vecteezy.com/system/resources/thumbnails/013/115/384/small_2x/cartoon-maths-elements-background-education-logo-vector.jpg" alt="">
+            <p>Khám Phá Các Dạng Toán và Cải Thiện Tư Duy của bạn. Tham Gia Ngay</p></a>
+        </div>
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/66fa6b851ff0b834eb2c3650/start?studentShare=true">
+            <h2>Toán Thực Tế</h2>
+            <img style="" src="https://media.geeksforgeeks.org/wp-content/uploads/20230503013704/Mathematics-Banner.webp" alt="">
+            <p>Khám Phá Các Dạng Toán Thực Tế Với Đời Sống. Tham Gia Ngay</p></a>
+        </div>
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/66a35a14c515e4332ff00e30/start?studentShare=true">
+            <h2>Luyện Từ Vựng</h2>
+            <img style="" src="https://www.liveinlondon.uk/wp-content/uploads/2018/07/Come-imparare-la-lingua-inglese.jpg" alt="">
+            <p>Cải Thiện Vốn Từ Vựng Tiếng Anh Của bạn. Tham Gia Ngay</p></a>
+        </div>
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/5dc11bc7421d23001b418c07/start?studentShare=true">
+            <h2>Luyện Ngữ Pháp</h2>
+            <img style="" src="https://www.topuniversities.com/sites/default/files/styles/736x304/public/guides/lead-bg-images/file%20-%202024-07-23T151645.181.jpg.webp" alt="">
+            <p>Củng Cố Ngữ Pháp. Tham Gia Ngay</p></a>
+        </div>
+        <div class="card" id="toan">
+            <a href="https://quizizz.com/join/quiz/5d8bafdfa744e3001b168be0/start?studentShare=true">
+            <h2>Luyện Reading</h2>
+            <img style="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD1LBI1-yh5xI263i-UcVzscQsxzEnzyTvpYHhzfICWwKB5w3WhSFYzQtlf-HN--rQ7hY&usqp=CAU" alt="">
+            <p>Đọc, Đọc, Đọc và Đọc. Tham Gia Ngay</p></a>
+        </div>
+        <a href="https://quizizz.com/join/quiz/658f4ebd87d31684783e555b/start?studentShare=true">
+            <div class="card" id="toan">
+              
+                <h2>Kiểm Tra IQ </h2>
+                <img style="" src="https://upo.edu.vn/wp-content/uploads/chi-so-iq-trong-sinh-trac-van-tay-1.jpg" alt="">
+                <p>Kiểm tra trí thông minh của bạn. Tham Gia Ngay</p></a>
+            </div>
+          
+
+        </a>
+        <a href="https://quizizz.com/join/quiz/66f7ce056dde3a93122ca37a/start?studentShare=true"> <div class="card" id="toan">
+              
+            <h2>Lịch Sử Việt Nam</h2>
+            <img style="" src="https://icdn.dantri.com.vn/thumb_w/640/2019/05/11/ho-chi-minh-1-1557593639276.jpg" alt="">
+            <p>Sử Ta Ta Phải Rõ</p></a>
+        </div></a>
+        <a href="https://quizizz.com/join/quiz/66f7c8c8ad3e780f9406faea/start?studentShare=true"> <div class="card" id="toan">
+              
+            <h2>Lịch Sử Ta </h2>
+            <img style="" src="https://static-images.vnncdn.net/files/publish/2023/9/8/vua-nao-tai-vi-lau-nhat-lich-su-viet-nam-551.jpg?width=0&s=VeBxwxBTrCBIgXCm--W1fA" alt="">
+            <p>Một lòng vì nước quên thân</p></a>
+        </div></a>
+        <a href="https://quizizz.com/join/quiz/662c6673278198041457049d/start?studentShare=true"> <div class="card" id="toan">
+              
+            <h2>Sử Ta </h2>
+            <img style="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BCOyQaEd_Z0A1ObcMaM7BRLWBirjBstzdA&s" alt="">
+            <p>Thề Mất M*ng Chứ Không Mất Nước</p></a>
+        </div></a>
+        <a href="https://www.16personalities.com/vi/b%C3%A0i-ki%E1%BB%83m-tra-t%C3%ADnh-c%C3%A1ch">
+            <div class="card" id="toan">
+              
+                <h2>Kiểm Tra Tính Cách Của Bạn </h2>
+                <img style="" src="https://images.careerviet.vn/content/images/tinh-cach-la-gi-careerbuilder-1.jpg" alt="">
+                <p>Khám Phá Tính Cách Của bạn</p></a>
+            </div>
+        </a>
+        <a href="https://www.zenquiz.net/pquiz/ban-co-tram-cam-hay-tu-ky-khong-UIDmVanlc6MzSjVOqzT">
+            <div class="card" id="toan">
+              
+                <h2>Kiểm Tra Mức Độ Tự Kĩ</h2>
+                <img style="" src="https://login.medlatec.vn//ImagePath/images/20200507/20200507_tu-ky-1.jpg" alt="">
+                <p>Nhận biết và chữa trị càng sớm càng tốt</p></a>
+            </div>
+        </a>
+       <a href="https://www.zenquiz.net/pquiz/kham-pha-tinh-cach-cua-ban-qavlj1wwi24k?p=ch01-010">
+        <div class="card" id="toan">
+              
+            <h2>Phát Triển Tính Cách </h2>
+            <img style="" src="https://adsmo.vn/wp-content/uploads/2020/12/Tai-sao-tinh-cach-thuong-hieu-quan-trong-adsmo-Bach-Tuyet-Bridal.jpg" alt="">
+            <p>Mỗi người một tính cách hãy khám phá nó</p></a>
+        </div>
+       </a>
+
+    </div>
+</body>
+</html>
