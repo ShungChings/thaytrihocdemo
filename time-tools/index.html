@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng Hồ Giáo Dục Thầy Trí Học</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #378dff;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clock-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.clock, .date {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timer, .time-exercise {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result, #timerResult {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .clock-container {
+        width: 90%;
+    }
+
+    .clock, .date {
+        font-size: 36px;
+    }
+}
+
+    </style>
+    <header>
+        <h1>Đồng Hồ Giáo Dục Thầy Trí Học</h1>
+    </header>
+
+    <div class="clock-container">
+        <div class="clock" id="clock"></div>
+        <div class="date" id="date"></div>
+        
+        <div class="timer">
+            <h2>Hẹn giờ:</h2>
+            <input type="number" id="timerInput" placeholder="Nhập số phút...">
+            <button onclick="startTimer()">Bắt đầu hẹn giờ</button>
+            <p id="timerResult"></p>
+        </div>
+
+       
+    </div>
+
+    <script >
+       function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    
+    document.getElementById('clock').textContent = timeString;
+    
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString('vi-VN', dateOptions);
+    document.getElementById('date').textContent = dateString;
+}
+
+function checkTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const userAnswer = document.getElementById('answer').value;
+
+    if (parseInt(userAnswer) === hours) {
+        document.getElementById('result').textContent = "Chính xác!";
+        document.getElementById('result').style.color = "green";
+    } else {
+        document.getElementById('result').textContent = `Sai rồi, bây giờ là ${hours} giờ!`;
+        document.getElementById('result').style.color = "red";
+    }
+}
+
+function startTimer() {
+    const minutes = parseInt(document.getElementById('timerInput').value);
+    if (isNaN(minutes) || minutes <= 0) {
+        document.getElementById('timerResult').textContent = "Vui lòng nhập số phút hợp lệ.";
+        document.getElementById('timerResult').style.color = "red";
+        return;
+    }
+
+    document.getElementById('timerResult').textContent = `Hẹn giờ trong ${minutes} phút.`;
+    document.getElementById('timerResult').style.color = "green";
+
+    setTimeout(() => {
+        alert("Đã hết giờ!");
+        document.getElementById('timerResult').textContent = "Hẹn giờ đã kết thúc.";
+        document.getElementById('timerResult').style.color = "blue";
+    }, minutes * 60 * 1000);
+}
+
+setInterval(updateClock, 1000);
+
+    </script>
+</body>
+</html>
